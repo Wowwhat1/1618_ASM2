@@ -1,0 +1,16 @@
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\bin\Debug\net5.0\1618_ASM2.exe
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\bin\Debug\net5.0\1618_ASM2.deps.json
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\bin\Debug\net5.0\1618_ASM2.runtimeconfig.json
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\bin\Debug\net5.0\1618_ASM2.runtimeconfig.dev.json
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\bin\Debug\net5.0\1618_ASM2.dll
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\bin\Debug\net5.0\1618_ASM2.pdb
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\obj\Debug\net5.0\1618_ASM2.csproj.AssemblyReference.cache
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\obj\Debug\net5.0\1618_ASM2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\obj\Debug\net5.0\1618_ASM2.AssemblyInfoInputs.cache
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\obj\Debug\net5.0\1618_ASM2.AssemblyInfo.cs
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\obj\Debug\net5.0\1618_ASM2.csproj.CoreCompileInputs.cache
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\obj\Debug\net5.0\1618_ASM2.dll
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\obj\Debug\net5.0\refint\1618_ASM2.dll
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\obj\Debug\net5.0\1618_ASM2.pdb
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\obj\Debug\net5.0\1618_ASM2.genruntimeconfig.cache
+C:\Users\Huynh Cong Chien\OneDrive\Documents\GW_Uni\1618_Programming\1618_ASM2\1618_ASM2\obj\Debug\net5.0\ref\1618_ASM2.dll
