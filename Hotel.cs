@@ -26,39 +26,103 @@ namespace _1618_ASM2
             Rooms.Add(room);
         }
 
-        public bool BookRoom(int roomId, string checkInDate, string checkOutDate, string customerName)
+        public bool BookRoom(int roomId, int daysStay, string customerName)
         {
             if (!IsAvailable(roomId))
-            {
+            { 
                 return false;
             }
-            var room = Rooms.FirstOrDefault(t => t.RoomNumber == roomId);
-            room.CheckInDate = checkInDate;
-            room.CheckOutDate = checkOutDate;
-            room.CustomerName = customerName;
+            var findRoomId = Rooms.FirstOrDefault(t => t.RoomNumber == roomId);
+            findRoomId.DaysStay = daysStay;
+            findRoomId.CustomerName = customerName;
+            findRoomId.BookRoom();
             return true;
         }
 
-        public bool IsAvailable(int roomid)
+        public bool IsAvailable(int roomId)
         {
-            var room = Rooms.FirstOrDefault(t => t.RoomNumber == roomid);
+            var room = Rooms.FirstOrDefault(t => t.RoomNumber == roomId);
+            if (room == null) return false;
             return room.IsEmpty;
         }
 
         public List<Room> SearchBookingByName(string name)
-        {
+        { 
             return Rooms.Where(x => x.CustomerName.Contains(name)).ToList();
         }
 
-        public void UpdateRoomPriceByRoomType(RoomType roomType, double roomPrice)
+        public List<Room> SearchRoomById(int id)
         {
-            for (int i = 0; i < Rooms.Count - 1; i++)
+            return Rooms.Where(x => x.RoomNumber == id).ToList();
+        }
+
+        public void UpdateRoomPriceByRoomType(RoomType roomType, double newRoomPrice)
+        {
+            for (int i = 0; i < Rooms.Count; i++)
             {
                 if (Rooms[i].RoomType == roomType)
                 {
-                    Rooms[i].SetPrice(roomPrice);
+                    Rooms[i].SetPrice(newRoomPrice);
                 }
             }
+        }
+
+        public double CalculateBill(int roomId)
+        {
+            var room = Rooms.FirstOrDefault(t => t.RoomNumber == roomId);
+            return room.DaysStay * room.RoomPrice;
+        }
+
+        public bool CancelRoom(int roomId)
+        {
+            if (IsAvailable(roomId))
+            { 
+                return false;
+            }
+            var findRoomId = SearchRoomById(roomId);
+            foreach (var room in findRoomId)
+            {
+                room.DaysStay = 0;
+                room.CustomerName = "None";
+                room.FreeRoom();
+            }
+            return true;
+        }
+
+        public bool IsRoomExist()
+        {
+            if (Rooms.Count == 0)
+            {
+                return false;
+            } 
+            else 
+                return true;
+        }
+
+        public bool IsRoomBooked()
+        {
+            var room = Rooms.FirstOrDefault(t => t.IsEmpty == true);
+            if (room.IsEmpty == true)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool IsDuplicated(int roomId)
+        {
+            if (Rooms.Count != 0)
+            {
+                foreach (var room in Rooms)
+                {
+                    if (room.RoomNumber == roomId)
+                    {
+                        Console.WriteLine("The room with the ID had already exist");
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
     }
 }

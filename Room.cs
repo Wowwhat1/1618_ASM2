@@ -8,19 +8,17 @@ namespace _1618_ASM2
 {
     internal class Room
     {
-       
-        public bool IsEmpty { get; set; }
+
+        public bool IsEmpty { get; set; } = true;
         public int RoomNumber { get; set; }
-        public string CheckInDate { get; set; }
-        public string CheckOutDate { get; set; }
+        public int DaysStay { get; set; }
         public string CustomerName { get; set; }
-        public double RoomPrice { get; set; }
+        public double RoomPrice { get; set; } = 100;
         public RoomType RoomType { get; set; }
 
         public Room()
         {
             IsEmpty = true;
-            RoomPrice = 10;
         }
 
         public Room(int roomNumber, RoomType type)
@@ -29,10 +27,9 @@ namespace _1618_ASM2
             RoomType = type;
         }
 
-        public Room(string checkInDate, string checkOutDate, string customerName)
+        public Room(int daysStay, string customerName)
         {
-            CheckInDate = checkInDate;
-            CheckOutDate = checkOutDate;
+            DaysStay = daysStay;
             CustomerName = customerName;
         }
 
@@ -55,6 +52,16 @@ namespace _1618_ASM2
         public void SetPrice(double price)
         {
             RoomPrice = price;
+        }
+
+        public void BookRoom()
+        {
+            IsEmpty = false;
+        }
+
+        public void FreeRoom()
+        {
+            IsEmpty = true;
         }
     }
 

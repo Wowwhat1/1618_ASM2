@@ -24,20 +24,42 @@ namespace _1618_ASM2
 
         public static void DisplayRoomInfo(Room room)
         {
-            Console.WriteLine("--------------------------------------");
-            Console.WriteLine($"Check-in date: {room.CheckInDate}");
-            Console.WriteLine($"Check-out date: {room.CheckOutDate}");
+            Console.WriteLine($"Days stay: {room.DaysStay}");
             Console.WriteLine($"Customer name: {room.CustomerName}");
             Console.WriteLine($"Room size: {room.RoomType}");
-            Console.WriteLine($"Bill: {room.RoomPrice}");
         }
 
         public static void DisplayRoomsInHotel(Hotel hotel)
         {
             Console.WriteLine("ALL ROOMS IN HOTEL");
-            foreach (var book in hotel.Rooms)
+            foreach (var room in hotel.Rooms)
             {
-                DisplayRoomInfo(book);
+                if (room.IsEmpty)
+                {
+                    Console.WriteLine($" --------ROOM {room.RoomNumber}-------- ");
+                    Console.WriteLine( "      AVAILABLE");
+                }
+                else
+                {
+                    Console.WriteLine($" --------ROOM {room.RoomNumber}-------- ");
+                    DisplayRoomInfo(room);
+                }
+            }
+        }
+
+        public static void DisplayRooms(List<Room> rooms)
+        {
+            if (rooms.Count == 0)
+            {
+                Console.WriteLine("Nothing Found ...");
+            }
+            else
+            {
+                foreach (var room in rooms)
+                {
+                    Console.WriteLine("--------------------------------------");
+                    DisplayRoomInfo(room);
+                }
             }
         }
     }
